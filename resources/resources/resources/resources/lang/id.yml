@@ -1,0 +1,5 @@
+messages:
+  weather:
+    rain: "Hujan menyejukkanmu."
+    storm: "Badai mendekat! Berhati-hatilah."
+    sunny: "Matahari membuatmu merasa kuat."
