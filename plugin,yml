@@ -1,0 +1,6 @@
+name: NatureBlessing
+version: 1.0.0
+api: [5.0.0]
+main: NatureBlessing\Main
+author: VsrStudio
+description: A survival plugin with dynamic weather effects, realistic gardening, and nature pets.
