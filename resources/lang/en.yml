@@ -1,5 +1,6 @@
-messages:
-  weather:
-    rain: "The rain is refreshing."
-    storm: "Danger ahead! Stay cautious."
-    sunny: "You feel empowered by the sun."
+NatureBlessing:
+  command:
+    weather:
+      rain: "It's raining! Restoring health..."
+      storm: "A storm is approaching! Be cautious!"
+      sunny: "The weather is sunny! Feeling energized!"
