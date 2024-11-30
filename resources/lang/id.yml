@@ -1,5 +1,6 @@
-messages:
-  weather:
-    rain: "Hujan menyejukkanmu."
-    storm: "Badai mendekat! Berhati-hatilah."
-    sunny: "Matahari membuatmu merasa kuat."
+NatureBlessing:
+  command:
+    weather:
+      rain: "Hujan turun! Menyembuhkan kesehatan..."
+      storm: "Badai mendekat! Hati-hati!"
+      sunny: "Cuaca cerah! Merasa bertenaga!"
