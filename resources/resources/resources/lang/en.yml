@@ -1,0 +1,5 @@
+messages:
+  weather:
+    rain: "The rain is refreshing."
+    storm: "Danger ahead! Stay cautious."
+    sunny: "You feel empowered by the sun."
