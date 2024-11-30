@@ -2,26 +2,36 @@
 
 namespace NatureBlessing\gardening;
 
-use pocketmine\event\Listener;
-use pocketmine\event\block\BlockPlaceEvent;
-use pocketmine\player\Player;
 use NatureBlessing\Main;
+use pocketmine\block\Block;
+use pocketmine\item\ItemFactory;
+use pocketmine\item\ItemIds;
+use pocketmine\utils\TextFormat;
 
-class GardenManager implements Listener {
+class GardenManager {
 
     private Main $plugin;
 
     public function __construct(Main $plugin) {
         $this->plugin = $plugin;
-        $plugin->getServer()->getPluginManager()->registerEvents($this, $plugin);
     }
 
-    public function onBlockPlace(BlockPlaceEvent $event): void {
-        $player = $event->getPlayer();
-        $block = $event->getBlock();
-
-        if ($block->getId() === 60) { // Farmland
-            $player->sendMessage("You've planted seeds! Use fertilizer for better growth.");
+    public function applyFruitToTrees(): void {
+        foreach ($this->plugin->getServer()->getOnlinePlayers() as $player) {
+            $radius = 5;
+            $center = $player->getPosition();
+            
+            for ($x = -$radius; $x <= $radius; $x++) {
+                for ($y = -1; $y <= 1; $y++) {
+                    for ($z = -$radius; $z <= $radius; $z++) {
+                        $block = $center->add($x, $y, $z)->getLevel()->getBlockAt($center->getFloorX() + $x, $center->getFloorY() + $y, $center->getFloorZ() + $z);
+                        if ($block->getId() === Block::LOG) {
+                            $player->getInventory()->addItem(ItemFactory::getInstance()->get(ItemIds::APPLE, 0, 1));
+                            $player->sendMessage(TextFormat::GREEN . "A tree nearby has borne fruit!");
+                        }
+                    }
+                }
+            }
         }
     }
 }
