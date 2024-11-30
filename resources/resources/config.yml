@@ -1,0 +1,5 @@
+weather:
+  effects:
+    rain: "The rain soothes you."
+    storm: "A storm is brewing! Be careful."
+    sunny: "The sunny weather makes you feel energized!"
