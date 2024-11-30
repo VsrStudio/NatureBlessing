@@ -1,0 +1,8 @@
+
+### Explanation:
+- **Plugin Features**: Describes the main features of the plugin, such as weather effects, gardening, and spirit pets.
+- **Installation**: Provides clear instructions for installing the plugin in a PocketMine-MP server.
+- **Configuration**: Explains how to modify the `config.yml` file.
+- **Commands**: Lists the available commands (`/nbweather`).
+- **Permissions**: Mentions that no permissions are required by default, but they can be added if needed.
+- **Credits**: Acknowledge the author and contributors.
